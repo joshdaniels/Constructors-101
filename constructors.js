@@ -35,6 +35,28 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/  
 // 
 // ANSWERS GO HERE
+var Dog = function (options) {
+  var options = options || {};
+  this.color = options.color;
+  this.status = options.status || 'normal';
+  this.hungry = (options.hungry === undefined) ? true : options.hungry;
+ 
+
+};
+  var Human = function (options){
+    var options = options || {};
+    this.cool = options.cool || false;
+    this.pet = function(dog) {
+    dog.status = 'happy';
+    };
+     this.feed = function(dog){
+    dog.hungry = false;
+    
+    };
+};
+
+
+
 
 // END ANSWERS
 
